@@ -18,3 +18,8 @@ import JotformEmbed from 'react-jotform-embed';
 
 ## Props
 - src : The url of your jotform, as given in their publish section. 
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/xurei/react-jotform-embed/badge.svg?style=beer-square)](https://beerpay.io/xurei/react-jotform-embed)  [![Beerpay](https://beerpay.io/xurei/react-jotform-embed/make-wish.svg?style=flat-square)](https://beerpay.io/xurei/react-jotform-embed?focus=wish)
