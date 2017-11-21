@@ -8,7 +8,7 @@ const iframeStyle = {
 	height: '300px',
 };
 
-class JobformEmbed extends React.Component {
+export default class JotformEmbed extends React.Component {
 	static propTypes = {
 		src: PropTypes.string.isRequired,
 		className: PropTypes.string,
@@ -23,7 +23,7 @@ class JobformEmbed extends React.Component {
 		const args = e.data.split(':');
 		const formId = args[2];
 		const iframe = ReactDOM.findDOMNode(this.refs.iframe);
-		if (!!iframe && props.src.endsWith(formId)) {
+		if (!!iframe && (!formId || props.src.endsWith(formId))) {
 			switch (args[0]) {
 				case 'scrollIntoView':
 					iframe.scrollIntoView();
@@ -81,6 +81,3 @@ class JobformEmbed extends React.Component {
 		return props.src !== nextProps.src || props.className !== nextProps.className;
 	}
 }
-
-module.exports = JobformEmbed;
-
