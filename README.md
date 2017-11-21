@@ -9,11 +9,11 @@ This handles the resize mechanism provided by JotForm.
 
 ## Usage
 ```javascript
-const JobformEmbed = require('react-jotform-embed');
+import JotformEmbed from 'react-jotform-embed';
 
 /* ... */
 
-<JobformEmbed src="https://form.jotformeu.com/123456789" />
+<JotformEmbed src="https://form.jotformeu.com/123456789" />
 ```
 
 ## Props
