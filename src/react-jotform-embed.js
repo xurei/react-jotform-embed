@@ -16,6 +16,9 @@ class JobformEmbed extends React.Component {
 	@autobind
 	handleIframeMessage(e) {
 		const props = this.props;
+		if (!e.data.split) {
+			return;
+		}
 		const args = e.data.split(':');
 		const formId = args[2];
 		const iframe = ReactDOM.findDOMNode(this.refs.iframe);
