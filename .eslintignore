@@ -1,0 +1,4 @@
+/tests/*
+/coverage
+/src/store/mocks
+/lib

@@ -1,0 +1,22 @@
+{
+  "extends": "xurei/react",
+  "parser": "babel-eslint",
+
+  "plugins": [
+    "promise",
+    "jsx",
+    "react",
+    "react-native",
+    "security"
+  ],
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+  }
+}
