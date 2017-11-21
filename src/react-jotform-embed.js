@@ -11,6 +11,7 @@ const iframeStyle = {
 class JobformEmbed extends React.Component {
 	static propTypes = {
 		src: PropTypes.string.isRequired,
+		className: PropTypes.string,
 	};
 	
 	@autobind
@@ -39,9 +40,9 @@ class JobformEmbed extends React.Component {
 					global.location.reload();
 					break;
 			}
-			var isJotForm = (e.origin.indexOf('jotform') > -1);
+			const isJotForm = (e.origin.indexOf('jotform') > -1);
 			if (isJotForm && 'contentWindow' in iframe && 'postMessage' in iframe.contentWindow) {
-				var urls = {
+				const urls = {
 					'docurl': encodeURIComponent(global.document.URL),
 					'referrer': encodeURIComponent(global.document.referrer),
 				};
@@ -50,7 +51,7 @@ class JobformEmbed extends React.Component {
 		}
 	}
 	
-	componentDidMount() {
+	componentWillMount() {
 		if (global.addEventListener) {
 			global.addEventListener('message', this.handleIframeMessage, false);
 		}
@@ -71,7 +72,7 @@ class JobformEmbed extends React.Component {
 	render() {
 		const props = this.props;
 		return (
-			<iframe ref="iframe" style={iframeStyle} className={props.className} allowTransparency="true" src={props.src} frameBorder={0} />
+			<iframe ref="iframe" style={iframeStyle} className={props.className} src={props.src} frameBorder={0} scrolling="no" />
 		);
 	}
 	
