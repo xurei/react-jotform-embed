@@ -5,7 +5,7 @@ import autobind from 'autobind-decorator';
 
 const iframeStyle = {
 	width: '100%',
-	height: '300px'
+	height: '300px',
 };
 
 class JobformEmbed extends React.Component {
@@ -40,7 +40,7 @@ class JobformEmbed extends React.Component {
 			if (isJotForm && 'contentWindow' in iframe && 'postMessage' in iframe.contentWindow) {
 				var urls = {
 					'docurl': encodeURIComponent(global.document.URL),
-					'referrer': encodeURIComponent(global.document.referrer)
+					'referrer': encodeURIComponent(global.document.referrer),
 				};
 				iframe.contentWindow.postMessage(JSON.stringify({'type': 'urls', 'value': urls}), '*');
 			}
