@@ -4,6 +4,7 @@
   "description": "A rewrite of the embeded iframe provided by JotForm",
   "main": "lib/react-jotform-embed.js",
   "scripts": {
+    "test": "echo 'no test specified'",
     "pretest": "node_modules/.bin/eslint .",
     "preversion": "npm test",
     "compile": "rimraf lib/* && babel src -d lib",
