@@ -1,6 +1,6 @@
 {
   "name": "react-jotform-embed",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A rewrite for React of the embedded iframe provided by JotForm",
   "main": "lib/react-jotform-embed.js",
   "scripts": {
