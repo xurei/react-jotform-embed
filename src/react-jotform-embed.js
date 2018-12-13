@@ -1,7 +1,6 @@
 const React = require('react'); //eslint-disable-line no-unused-vars
 const ReactDOM = require('react-dom');
 const PropTypes = require('prop-types');
-import autobind from 'autobind-decorator';
 
 const iframeStyle = {
 	width: '100%',
@@ -14,7 +13,11 @@ export default class JotformEmbed extends React.Component {
 		className: PropTypes.string,
 	};
 	
-	@autobind
+	constructor(props) {
+		super(props);
+		this.handleIframeMessage = this.handleIframeMessage.bind(this);
+	}
+	
 	handleIframeMessage(e) {
 		const props = this.props;
 		if (!e.data.split) {
