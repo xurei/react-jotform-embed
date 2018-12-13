@@ -18,5 +18,6 @@
     }
   },
   "rules": {
+    "complexity": 0
   }
 }
