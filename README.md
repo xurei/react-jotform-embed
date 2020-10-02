@@ -19,6 +19,7 @@ import JotformEmbed from 'react-jotform-embed';
 
 ## Props
 - src : The url of your jotform, as given in their publish section. 
+- scrolling : A boolean to allow or disallow scrolling. Scrolling is turned off by default
 
 ## Support on Beerpay
 Hey dude! Help me out for a couple of :beers:!
