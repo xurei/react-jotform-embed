@@ -76,7 +76,7 @@ export default class JotformEmbed extends React.Component {
 	render() {
 		const props = this.props;
 		return (
-			<iframe ref="iframe" style={iframeStyle} className={props.className} src={props.src} frameBorder={0} scrolling={props.scrolling ? "yes" : "no"} />
+			<iframe ref="iframe" style={iframeStyle} className={props.className} src={props.src} frameBorder={0} scrolling={props.scrolling ? 'yes' : 'no'} />
 		);
 	}
 
