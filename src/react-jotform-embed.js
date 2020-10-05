@@ -11,14 +11,14 @@ export default class JotformEmbed extends React.Component {
 	static propTypes = {
 		src: PropTypes.string.isRequired,
 		className: PropTypes.string,
-		scrolling: PropTypes.bool
+		scrolling: PropTypes.bool,
 	};
-	
+
 	constructor(props) {
 		super(props);
 		this.handleIframeMessage = this.handleIframeMessage.bind(this);
 	}
-	
+
 	handleIframeMessage(e) {
 		const props = this.props;
 		if (!e.data.split) {
@@ -54,7 +54,7 @@ export default class JotformEmbed extends React.Component {
 			}
 		}
 	}
-	
+
 	componentWillMount() {
 		if (global.addEventListener) {
 			global.addEventListener('message', this.handleIframeMessage, false);
@@ -63,7 +63,7 @@ export default class JotformEmbed extends React.Component {
 			global.attachEvent('onmessage', this.handleIframeMessage);
 		}
 	}
-	
+
 	componentWillUnmount() {
 		if (global.removeEventListener) {
 			global.removeEventListener('message', this.handleIframeMessage, false);
@@ -72,16 +72,16 @@ export default class JotformEmbed extends React.Component {
 			global.detachEvent('onmessage', this.handleIframeMessage);
 		}
 	}
-	
+
 	render() {
 		const props = this.props;
 		return (
 			<iframe ref="iframe" style={iframeStyle} className={props.className} src={props.src} frameBorder={0} scrolling={props.scrolling ? "yes" : "no"} />
 		);
 	}
-	
+
 	shouldComponentUpdate(nextProps) {
 		const props = this.props;
-		return props.src !== nextProps.src || props.className !== nextProps.className;
+		return props.src !== nextProps.src || props.className !== nextProps.className || props.scrolling !== nextProps.scrolling;
 	}
 }
