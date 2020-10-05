@@ -1,3 +1,5 @@
+import 'core-js/stable';
+
 const React = require('react'); //eslint-disable-line no-unused-vars
 const ReactDOM = require('react-dom');
 const PropTypes = require('prop-types');

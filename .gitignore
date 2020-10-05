@@ -1,6 +1,7 @@
 node_modules
 .wercker
 *.iml
+.idea
 /lab
 /coverage
 .storybook
