@@ -14,7 +14,7 @@ npm install react-jotform-embed
 ```
 
 ## Usage
-```javascript
+```jsx
 import JotformEmbed from 'react-jotform-embed';
 
 <JotformEmbed src="https://form.jotformeu.com/123456789" />
@@ -23,6 +23,15 @@ import JotformEmbed from 'react-jotform-embed';
 ## Props
 - src : The url of your jotform, as given in their publish section. 
 - scrolling : A boolean to allow or disallow scrolling. Scrolling is turned off by default
+
+## Notes
+
+To pre-populate forms in the field, add them as url params to your form. For example:
+
+```jdx
+let name = "John";
+<JotformEmbed src="https://form.jotformeu.com/123456789?name=John" />
+```
 
 ## Support Open-Source
 Support my work on https://github.com/sponsors/xurei
