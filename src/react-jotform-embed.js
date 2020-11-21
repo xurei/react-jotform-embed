@@ -29,7 +29,7 @@ export default class JotformEmbed extends React.Component {
 		const args = e.data.split(':');
 		const formId = args[2];
 		const iframe = ReactDOM.findDOMNode(this.refs.iframe);
-		if (!!iframe && (!formId || props.src.includes(formId))) {
+		if (!!iframe && (!formId || props.src.split('?')[0].endsWith(formId))) {
 			switch (args[0]) {
 				case 'scrollIntoView':
 					iframe.scrollIntoView();
