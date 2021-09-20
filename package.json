@@ -5,6 +5,7 @@
   "main": "lib/cjs/react-jotform-embed.js",
   "module": "lib/module/react-jotform-embed.js",
   "sideEffects": false,
+  "files": ["lib"],
   "scripts": {
     "test": "echo 'no test specified'",
     "pretest": "node_modules/.bin/eslint .",
