@@ -1,3 +1,6 @@
+# v1.1.2 - 2021-09-20
+- Add module imports. Thanks to @cncolder
+
 # v1.1.1 - 2020-11-23
 - Add support for pre-population; Thanks to @chug2k
 

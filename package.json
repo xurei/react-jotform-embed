@@ -1,11 +1,13 @@
 {
   "name": "react-jotform-embed",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A rewrite for React of the embedded iframe provided by JotForm",
   "main": "lib/cjs/react-jotform-embed.js",
   "module": "lib/module/react-jotform-embed.js",
   "sideEffects": false,
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "echo 'no test specified'",
     "pretest": "node_modules/.bin/eslint .",
