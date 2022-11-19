@@ -38,19 +38,19 @@ export default class JotformEmbed extends React.Component {
 					iframe.style.height = `${args[1]}px`;
 					break;
 				case 'collapseErrorPage':
-					if (iframe.clientHeight > global.innerHeight) {
-						iframe.style.height = `${global.innerHeight}px`;
+					if (iframe.clientHeight > globalThis.innerHeight) {
+						iframe.style.height = `${globalThis.innerHeight}px`;
 					}
 					break;
 				case 'reloadPage':
-					global.location.reload();
+					globalThis.location.reload();
 					break;
 			}
 			const isJotForm = (e.origin.indexOf('jotform') > -1);
 			if (isJotForm && 'contentWindow' in iframe && 'postMessage' in iframe.contentWindow) {
 				const urls = {
-					'docurl': encodeURIComponent(global.document.URL),
-					'referrer': encodeURIComponent(global.document.referrer),
+					'docurl': encodeURIComponent(globalThis.document.URL),
+					'referrer': encodeURIComponent(globalThis.document.referrer),
 				};
 				iframe.contentWindow.postMessage(JSON.stringify({'type': 'urls', 'value': urls}), '*');
 			}
@@ -58,20 +58,20 @@ export default class JotformEmbed extends React.Component {
 	}
 
 	componentWillMount() {
-		if (global.addEventListener) {
-			global.addEventListener('message', this.handleIframeMessage, false);
+		if (globalThis.addEventListener) {
+			globalThis.addEventListener('message', this.handleIframeMessage, false);
 		}
-		else if (global.attachEvent) {
-			global.attachEvent('onmessage', this.handleIframeMessage);
+		else if (globalThis.attachEvent) {
+			globalThis.attachEvent('onmessage', this.handleIframeMessage);
 		}
 	}
 
 	componentWillUnmount() {
-		if (global.removeEventListener) {
+		if (globalThis.removeEventListener) {
 			global.removeEventListener('message', this.handleIframeMessage, false);
 		}
-		else if (global.detachEvent) {
-			global.detachEvent('onmessage', this.handleIframeMessage);
+		else if (globalThis.detachEvent) {
+			globalThis.detachEvent('onmessage', this.handleIframeMessage);
 		}
 	}
 
