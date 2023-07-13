@@ -1,3 +1,6 @@
+# v1.1.3 - 2023-05-13
+- Support for React 17 and ulterior
+
 # v1.1.2 - 2021-09-20
 - Add module imports. Thanks to @cncolder
 
