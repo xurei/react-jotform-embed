@@ -1,5 +1,7 @@
 # react-jotform-embed
 
+#### ⚠ This project is no more maintained. Check (https://github.com/sbayd/jotform-react) for a more up-to-date alternative. ⚠
+
 A rewrite for React of the embedded iframe provided by JotForm [https://www.jotform.com/](https://www.jotform.com/)
 
 This handles the resize mechanism provided by JotForm.
